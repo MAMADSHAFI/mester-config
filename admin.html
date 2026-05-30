@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel – MESTER CONFIG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Effects -->
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<!-- Navigation -->
+<nav>
+  <a class="nav-brand" href="index.html">MC</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay" id="nav-overlay"></div>
+<div class="nav-menu" id="nav-menu">
+  <a href="index.html">⌂&nbsp; HOME</a>
+  <a href="admin.html">⚙&nbsp; ADMIN PANEL</a>
+  <a href="contact.html">✉&nbsp; CONTACT ADMIN</a>
+</div>
+
+<!-- Login Section -->
+<div id="login-section" class="auth-container" style="display:flex">
+  <div class="auth-card">
+    <div class="auth-title">⚙ ADMIN LOGIN</div>
+    <div id="login-error" class="auth-error"></div>
+    <form id="login-form">
+      <div class="form-group">
+        <label class="form-label" for="email">EMAIL ADDRESS</label>
+        <input class="form-input" type="email" id="email" placeholder="admin@email.com" required autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="password">PASSWORD</label>
+        <input class="form-input" type="password" id="password" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn-login">LOGIN</button>
+    </form>
+  </div>
+</div>
+
+<!-- Admin Panel Section -->
+<div id="admin-section" style="display:none">
+  <div class="admin-panel">
+    <div class="admin-header">
+      <div>
+        <div class="admin-title">⚙ ADMIN PANEL</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;letter-spacing:1px" id="admin-email"></div>
+      </div>
+      <button class="btn-logout" id="logout-btn">⏻ LOGOUT</button>
+    </div>
+
+    <div class="section-title">◈ CONFIGS EDITOR</div>
+
+    <p class="hint-text">
+      Each line = one config. Empty lines are ignored.<br>
+      Supported: <span style="color:#00ff88">vless://</span> · <span style="color:#ffaa00">vmess://</span> · <span style="color:#ff6b6b">trojan://</span>
+    </p>
+
+    <textarea
+      class="config-textarea"
+      id="config-textarea"
+      placeholder="vless://xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx@server.com:443?...
+vmess://eyJhZGQiOiJzZXJ2ZXIuY29tIiwicG9y...
+trojan://password@server.com:443?..."
+      spellcheck="false"
+    ></textarea>
+
+    <button class="btn-save" id="save-btn">◈ SAVE CONFIGS</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer style="position:relative;z-index:1">
+  ◈ MADE BY MOHAMMAD SHAFI ◈
+</footer>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

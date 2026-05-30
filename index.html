@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MESTER CONFIG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader-logo">MESTER CONFIG</div>
+  <div class="cyber-loader"></div>
+</div>
+
+<!-- Background Effects -->
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- Navigation -->
+<nav>
+  <a class="nav-brand" href="index.html">MC</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+<div class="nav-menu" id="nav-menu">
+  <a href="index.html">⌂&nbsp; HOME</a>
+  <a href="admin.html">⚙&nbsp; ADMIN PANEL</a>
+  <a href="contact.html">✉&nbsp; CONTACT ADMIN</a>
+</div>
+
+<!-- Header -->
+<header>
+  <h1 class="header-title">MESTER CONFIG</h1>
+  <p class="header-subtitle">VPN • V2RAY • NPV TUNNEL</p>
+  <p class="header-made">Made By Mohammad Shafi</p>
+</header>
+
+<!-- Main Content -->
+<main>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">◈</div>
+      <div class="stat-label">Total Configs</div>
+      <div class="stat-value" id="total-configs">–</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">◷</div>
+      <div class="stat-label">Last Update</div>
+      <div class="stat-value" id="last-update">–</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">◉</div>
+      <div class="stat-label">Status</div>
+      <div class="stat-value" id="online-status" style="color:#ffaa00">…</div>
+    </div>
+  </div>
+
+  <!-- Configs -->
+  <div class="section-title">◈ CONFIGS</div>
+  <div class="configs-grid" id="configs-grid">
+    <div class="empty-state">◌ LOADING CONFIGS...</div>
+  </div>
+
+  <!-- Refresh Button -->
+  <button class="btn-refresh" id="refresh-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="1 4 1 10 7 10"></polyline>
+      <path d="M3.51 15a9 9 0 1 0 .49-4.51"></path>
+    </svg>
+    <span>REFRESH</span>
+  </button>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  ◈ MADE BY MOHAMMAD SHAFI ◈
+</footer>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

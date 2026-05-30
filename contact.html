@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Admin – MESTER CONFIG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Effects -->
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<!-- Navigation -->
+<nav>
+  <a class="nav-brand" href="index.html">MC</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay" id="nav-overlay"></div>
+<div class="nav-menu" id="nav-menu">
+  <a href="index.html">⌂&nbsp; HOME</a>
+  <a href="admin.html">⚙&nbsp; ADMIN PANEL</a>
+  <a href="contact.html">✉&nbsp; CONTACT ADMIN</a>
+</div>
+
+<!-- Header -->
+<header>
+  <h1 class="header-title" style="font-size:clamp(1.6rem,5vw,3rem)">CONTACT ADMIN</h1>
+  <p class="header-subtitle">DIRECT SUPPORT CHANNELS</p>
+</header>
+
+<!-- Main Content -->
+<main>
+  <div class="section-title">◈ REACH US</div>
+  <div class="contact-grid">
+
+    <!-- Telegram -->
+    <a href="https://t.me/Mestershafi" target="_blank" rel="noopener" class="contact-card telegram">
+      <div class="contact-icon">✈</div>
+      <div class="contact-platform">TELEGRAM</div>
+      <div class="contact-id">@Mestershafi</div>
+      <div class="contact-link-text">t.me/Mestershafi</div>
+    </a>
+
+    <!-- Bale -->
+    <a href="#" class="contact-card bale">
+      <div class="contact-icon">◎</div>
+      <div class="contact-platform">BALE</div>
+      <div class="contact-id">@mohammadshafii</div>
+      <div class="contact-link-text">ble.ir/mohammadshafii</div>
+    </a>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer style="position:relative;z-index:1">
+  ◈ MADE BY MOHAMMAD SHAFI ◈
+</footer>
+
+<script>
+  // Hamburger Menu
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  const navOverlay = document.getElementById('nav-overlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('open');
+    navOverlay.classList.toggle('show');
+  }
+  hamburger?.addEventListener('click', toggleMenu);
+  navOverlay?.addEventListener('click', toggleMenu);
+  navMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    if (navMenu.classList.contains('open')) toggleMenu();
+  }));
+</script>
+</body>
+</html>
