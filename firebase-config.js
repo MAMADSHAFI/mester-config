@@ -2,7 +2,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyDQoP5spzDO_aJERtFwyrdqFAHdgPdFE40",
   authDomain: "mester-configg.firebaseapp.com",
-  databaseURL: "https://mester-configg-default-rtdb.asia-southeast1.firebasedatabase.app",
+  databaseURL: "https://mester-configg-default-rtdb.firebaseio.com",
   projectId: "mester-configg",
   storageBucket: "mester-configg.firebasestorage.app",
   messagingSenderId: "910257844237",
