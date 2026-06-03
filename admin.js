@@ -45,9 +45,33 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.disabled = true;
     loginError.style.display = 'none';
 
-    try {
-      await auth.signInWithEmailAndPassword(email, password);
-catch (err) {
+    // ─── Login Form ───
+const loginForm = document.getElementById('login-form');
+const loginError = document.getElementById('login-error');
+
+loginForm?.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const btn = loginForm.querySelector('.btn-login');
+
+  btn.textContent = 'CONNECTING...';
+  btn.disabled = true;
+  loginError.style.display = 'none';
+
+  try {
+    await auth.signInWithEmailAndPassword(email, password);
+  } catch (err) {
+    console.error(err);
+
+    loginError.style.display = 'block';
+    loginError.textContent = err.code + " | " + err.message;
+
+    btn.textContent = 'LOGIN';
+    btn.disabled = false;
+  }
+});
   console.error(err);
 
   loginError.style.display = 'block';
