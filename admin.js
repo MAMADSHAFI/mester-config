@@ -51,7 +51,7 @@ catch (err) {
   console.error(err);
 
   loginError.style.display = 'block';
-  loginError.textContent = err.code;
+  loginError.textContent = err.code + " | " + err.message;
 
   btn.textContent = 'LOGIN';
   btn.disabled = false;
