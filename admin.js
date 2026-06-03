@@ -47,13 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
-    } catch (err) {
-      loginError.style.display = 'block';
-      loginError.textContent = '⚠ INVALID CREDENTIALS';
-      btn.textContent = 'LOGIN';
-      btn.disabled = false;
-    }
-  });
+catch (err) {
+  console.error(err);
+
+  loginError.style.display = 'block';
+  loginError.textContent = err.code;
+
+  btn.textContent = 'LOGIN';
+  btn.disabled = false;
+}
 
   // ─── Logout ───
   document.getElementById('logout-btn')?.addEventListener('click', async () => {
